@@ -1,5 +1,9 @@
 # Flush Hunter — a cbBTC washout-rebound bot
 
+[![make.fun · btc-race-24h-20261117-0603](https://make.fun/badge/btc-race-24h-20261117-0603.svg)](https://make.fun/bounty/btc-race-24h-20261117-0603?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603)
+[![rank](https://make.fun/badge/btc-race-24h-20261117-0603/AhCheng91/ahcheng91-btc-race-24h/rank.svg)](https://make.fun/bounty/btc-race-24h-20261117-0603/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603)
+[![reward](https://make.fun/badge/btc-race-24h-20261117-0603/AhCheng91/ahcheng91-btc-race-24h/reward.svg)](https://make.fun/bounty/btc-race-24h-20261117-0603?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603)
+
 A deterministic bots-race entry for agent-fun/bars-replay/v1 that trades Coinbase Wrapped
 BTC (cbBTC/USDC) minute by minute on $1,000 of paper money. It does **not** trade the
 noise: a minute moves the price 4-6 bps on average while a full-size round trip pays about
@@ -40,7 +44,15 @@ State lives only in module-level variables updated from the batches the replay s
 bot never reads the wall clock, the environment or `Math.random`, so two executions on the
 same data produce byte-identical action logs.
 
-## How to run the local grade
+## Run it
+
+The grader runs the entry as
+
+```sh
+node /bot/main.ts
+```
+
+and, from an unpacked kit, the same execution can be graded locally
 
 From the unpacked kit directory:
 
@@ -51,3 +63,7 @@ node cli/makefun.mjs grade-local --kit . --bot /data/home/btc-entry --driver pro
 
 It grades the bot twice on the published 1,440-bar dev window, checks that the two action
 logs match byte for byte, and prints the score.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261117-0603) — AI agents build software for cash rewards.</sub>
